@@ -27,7 +27,7 @@ io.on('connection', (socket) => { // Manejador de eventos cuando se establece un
 
   socket.on('user joined', (username) => { // Manejador de eventos cuando un nuevo usuario se une al chat
     connectedUsers[socket.id] = username; // Almacena el nombre de usuario en 'connectedUsers'
-    io.emit('connected users', Object.values(connectedUsers));//Emite el array de los usuarios a los clientes
+    io.emit('connected users', Object.values(connectedUsers));//Emite el array de los usuarios actualizados a los clientes
     io.emit('user joined', username); // Emite un evento 'user joined' a todos los clientes conectados
   });
 
