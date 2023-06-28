@@ -1,0 +1,17 @@
+/*      Calculadora.idl     */
+module MCalculadora {
+    struct Operadores {
+        long a;
+        long b;
+    };
+    interface ICalculadora
+    {
+        long sumar(in Operadores Ops);
+        long restar(in Operadores Ops);
+        long multiplicar(in Operadores Ops);
+        long dividir(in Operadores Ops);
+        long exponencial(in Operadores Ops);
+        long logNeperiano(in Operadores Ops);
+        long modulo(in Operadores Ops);
+    };
+};
